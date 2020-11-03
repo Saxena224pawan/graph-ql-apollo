@@ -26,10 +26,9 @@ const CollectionPageContainer =({match}) =>(
         title: match.params.collectionId}}
         >
     {
-        ({ loading, data, error }) =>{
+        ({ loading, data:{getCollectionsByTitle} }) =>{
 
     if (loading) return <Spinner />;
-    const {getCollectionsByTitle}= data;
     return <CollectionPage collection= { getCollectionsByTitle } />;
 }}
     </Query>

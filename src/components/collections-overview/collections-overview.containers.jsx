@@ -20,7 +20,7 @@ const GET_COLLECTIONS = gql`
 }
 `;
 const CollectionsOverviewContainer =() =>(
-    <Query quiery ={GET_COLLECTIONS}>
+    <Query query ={GET_COLLECTIONS}>
         {
             ({loading, error, data}) =>{
                 console.log({loading});
